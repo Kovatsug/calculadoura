@@ -5,9 +5,12 @@ public class CalculadoraRequest {
     private double numero1;
     private double numero2;
 
-    public CalculadoraRequest(double x, double y) {
-        this.numero1 = x;
-        this.numero2 = y;
+    public CalculadoraRequest() {
+    }
+
+    public CalculadoraRequest(double numero1, double numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
     }
 
     public double getNumero1() {

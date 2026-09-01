@@ -8,33 +8,32 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculadoraService {
 
-    double numero1,numero2,resultado;
 
     public CalculadoraResponse somar(CalculadoraRequest request){
-        numero1 = request.getNumero1();
-        numero2 = request.getNumero2();
-        resultado = numero1 + numero2;
+        double numero1 = request.getNumero1();
+        double numero2 = request.getNumero2();
+        double resultado = numero1 + numero2;
         return new CalculadoraResponse(numero1,numero2, "soma", resultado);
     }
 
     public CalculadoraResponse subtrair(CalculadoraRequest request){
-        numero1 = request.getNumero1();
-        numero2 = request.getNumero2();
-        resultado = numero1 - numero2;
-        return new CalculadoraResponse(numero1,numero2,"subtracao",resultado);
+        double numero1 = request.getNumero1();
+        double numero2 = request.getNumero2();
+        double resultado = numero1 - numero2;
+        return new CalculadoraResponse(numero1,numero2,"subtração",resultado);
     }
 
     public CalculadoraResponse multiplicar(CalculadoraRequest request){
-        numero1 = request.getNumero1();
-        numero2 = request.getNumero2();
-        resultado = numero1 * numero2;
-        return new CalculadoraResponse(numero1,numero2,"multiplicacao",resultado);
+        double numero1 = request.getNumero1();
+        double numero2 = request.getNumero2();
+        double resultado = numero1 * numero2;
+        return new CalculadoraResponse(numero1,numero2,"multiplicação",resultado);
     }
 
     public CalculadoraResponse dividir(CalculadoraRequest request){
-        numero1 = request.getNumero1();
-        numero2 = request.getNumero2();
-        resultado = (numero2==0)? 0 : numero1/numero2;
+        double numero1 = request.getNumero1();
+        double numero2 = request.getNumero2();
+        double resultado = (numero2==0)? 0 : numero1/numero2;
         return new CalculadoraResponse(numero1,numero2,"divisão",resultado);
     }
 
