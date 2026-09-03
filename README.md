@@ -24,3 +24,8 @@ A API deverá receber um JSON contendo dois números:
   "numero1": 10,
   "numero2": 5
 }
+```
+
+Exemplo no cmd:
+```
+curl -X POST -H "Content-Type: application/json" -d "{\"numero1\":10, \"numero2\":5}" http://localhost:8080/calculadora/somar
